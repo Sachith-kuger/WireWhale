@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #171B20;
+    color: #E0E5EB;
+    @apply antialiased font-sans;
+  }
+
+  ::selection {
+    background-color: rgba(120, 175, 169, 0.25);
+    color: #E0E5EB;
+  }
+
+  /* Force select options across WebKit / Chrome macOS to use dark styling */
+  select option {
+    background-color: #222830;
+    color: #E0E5EB;
+  }
+
+  /* Low-glare custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #171B20;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #39414B;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4A5462;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
